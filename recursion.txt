@@ -1,0 +1,16 @@
+def is_palindrome(word):
+    if len(word) <= 1:
+        return True
+    
+    if word[0] == word[-1]:
+        return is_palindrome(word[1:-1])
+    
+    return False
+
+# Example usage:
+word = "radar"
+result = is_palindrome(word)
+if result:
+    print(f"{word} is a palindrome")
+else:
+    print(f"{word} is not a palindrome")
